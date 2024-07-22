@@ -1,5 +1,30 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-rwcarlsen-goexif (0.0~git20190401.9e8deec-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.4.1, no changes needed.
+  * Apply multi-arch hints.
+    + golang-github-rwcarlsen-goexif-dev: Add Multi-Arch: foreign.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 21 Aug 2021 11:58:31 +0100
+
+golang-github-rwcarlsen-goexif (0.0~git20190401.9e8deec-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20190401.9e8deec
+  * Change debian/watch to track git repository directly
+  * Apply "cme fix dpkg" fixes:
+    - Update debhelper dependency to "Build-Depends: debhelper-compat (= 12)"
+    - Bump Standards-Version to 4.4.0 (no change)
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Remove extraneous second shebang line in debian/rules
+  * Simplify override_dh_auto_install in debian/rules with
+    "dh_auto_install -- --no-binaries" instead of manual "rm -rf"
+
+ -- Anthony Fok <foka@debian.org>  Sun, 11 Aug 2019 03:29:17 -0600
+
+golang-github-rwcarlsen-goexif (0.0~git20180410.fb35d3c-1) unstable; urgency=medium
+
+  * Initial release (Closes: #897448)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 02 May 2018 15:40:38 -0600
