@@ -1,4 +1,9 @@
 #!/usr/bin/make -f
 
+export DH_GOLANG_INSTALL_EXTRA := exif/samples exif/sample1.jpg exif/corrupt tiff/sample1.tif
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_install:
+	dh_auto_install -- --no-binaries
